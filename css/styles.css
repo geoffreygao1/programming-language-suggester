@@ -52,7 +52,7 @@ label {
 }
 
 input[type="radio"]:checked+label {
-  border: 2px solid darkgrey;
-  background-color: rgb(226, 226, 226);
+  border: 2px solid rgb(25, 48, 131);
+  background-color: rgb(188, 213, 237);
   font-weight: bold;
 }
