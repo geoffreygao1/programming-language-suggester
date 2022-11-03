@@ -9,125 +9,139 @@
 </head>
 
 <body>
-  <h1 id="header">Programming Language Suggester</h1>
-  <p id="intro">Answer these questions to help decide which programming language is best for you:</p>
-  <div id="start">
-    <button type="button" id="startBtn">Start!</button>
-  </div>
-  <form id="survey">
-
-    <div class="hidden" id="question1">
-      <h2>Which are you most interested in?</h2>
-      <div class="button">
-        <label class="btn" for="a1">Web Development</label>
-        <input type="radio" name="q1" id="a1" value="a" required>
-      </div>
-      <div class="button">
-        <label class="btn" for="a2">Server-side scripting</label>
-        <input type="radio" name="q1" id="a2" value="b">
-      </div>
-      <div class="button">
-        <label class="btn" for="a3">Server-side development</label>
-        <input type="radio" name="q1" id="a3" value="c">
-      </div>
-      <div class="button hidden">
-        <label class="btn" for="a4"></label>
-        <input type="radio" name="q1" id="a4" value="" checked>
-      </div>
-      <button type="button" class="nextBtn" id="q1Btn">Next</button>
+  <div class="container">
+    <div id="start">
+      <h1 id="header">Programming Language Suggester</h1>
+      <p id="intro">Answer these questions to help decide which programming language is best for you:</p>
+      <button type="button" id="startBtn" class="btn btn-primary btn-lg">Start!</button>
     </div>
 
-    <div class="hidden" id="question2">
-      <h2>Which are you most interested in?</h2>
-      <div class="button">
-        <label class="btn" for="a1">Mobile apps</label>
-        <input type="radio" name="q2" id="a1" value="a" required>
-      </div>
-      <div class="button">
-        <label class="btn" for="a2">Web development</label>
-        <input type="radio" name="q2" id="a2" value="b">
-      </div>
-      <div class="button">
-        <label class="btn" for="a3">Data analysis and machine learning</label>
-        <input type="radio" name="q2" id="a3" value="c">
-      </div>
-      <div class="button hidden">
-        <label class="btn" for="a4"></label>
-        <input type="radio" name="q2" id="a4" value="" checked>
-      </div>
-      <button type="button" class="nextBtn" id="q2Btn">Next</button>
-    </div>
+    <form id="survey">
+      <div class="hidden" id="question1">
+        <h2>Which are you most interested in?</h2>
+        <div class="row">
+          <div class="button col-4">
+            <label for="a1">Web Development</label>
+            <input type="radio" name="q1" id="a1" value="a" required>
+          </div>
+          <div class="button col-4">
+            <label for="a2">Server-side scripting</label>
+            <input type="radio" name="q1" id="a2" value="b">
+          </div>
+          <div class="button col-4">
+            <label for="a3">Server-side development</label>
+            <input type="radio" name="q1" id="a3" value="c">
+          </div>
+        </div>
 
-    <div class="hidden" id="question3">
-      <h2>Which are you most interested in?</h2>
-      <div class="button">
-        <label class="btn" for="a1">Desktop Applications</label>
-        <input type="radio" name="q3" id="a1" value="a" required>
-      </div>
-      <div class="button">
-        <label class="btn" for="a2">Creating browser games</label>
-        <input type="radio" name="q3" id="a2" value="b">
-      </div>
-      <div class="button">
-        <label class="btn" for="a3">Automation or scripting</label>
-        <input type="radio" name="q3" id="a3" value="c">
-      </div>
-      <div class="button hidden">
-        <label class="btn" for="a4"></label>
-        <input type="radio" name="q3" id="a4" value="" checked>
-      </div>
-      <button type="button" class="nextBtn" id="q3Btn">Next</button>
-    </div>
+        <div class="hidden">
+          <label for="placeholder1"></label>
+          <input type="radio" name="q1" id="placeholder1" value="" checked>
+        </div>
 
-    <div class="hidden" id="question4">
-      <h2>Which are you most interested in?</h2>
-      <div class="button">
-        <label class="btn" for="a1">Banking</label>
-        <input type="radio" name="q4" id="a1" value="a" required>
+        <button type="button" class="btn btn-secondary btn-lg nextBtn" id="q1Btn">Next</button>
       </div>
-      <div class="button">
-        <label class="btn" for="a2">Web and Mobile Apps</label>
-        <input type="radio" name="q4" id="a2" value="b">
-      </div>
-      <div class="button">
-        <label class="btn" for="a3">Mobile and Web Apps</label>
-        <input type="radio" name="q4" id="a3" value="c">
-      </div>
-      <div class="button hidden">
-        <label class="btn" for="a4"></label>
-        <input type="radio" name="q4" id="a4" value="" checked>
-      </div>
-      <button type="button" class="nextBtn" id="q4Btn">Next</button>
-    </div>
 
-    <div class="hidden" id="question5">
-      <h2>Whats your favorite color?</h2>
-      <div class="button">
-        <label class="btn" for="a1">Red</label>
-        <input type="radio" name="q5" id="a1" value="a" required>
+      <div class="hidden" id="question2">
+        <h2>Which are you most interested in?</h2>
+        <div class="row">
+          <div class="button col-4">
+            <label for="a1">Mobile apps</label>
+            <input type="radio" name="q2" id="a1" value="a" required>
+          </div>
+          <div class="button col-4">
+            <label for="a2">Web development</label>
+            <input type="radio" name="q2" id="a2" value="b">
+          </div>
+          <div class="button col-4">
+            <label for="a3">Data analysis and machine learning</label>
+            <input type="radio" name="q2" id="a3" value="c">
+          </div>
+        </div>
+        <div class="button hidden">
+          <label for="a4"></label>
+          <input type="radio" name="q2" id="a4" value="" checked>
+        </div>
+        <button type="button" class="btn btn-secondary btn-lg nextBtn" id="q2Btn">Next</button>
       </div>
-      <div class="button">
-        <label class="btn" for="a2">Blue</label>
-        <input type="radio" name="q5" id="a2" value="b">
-      </div>
-      <div class="button">
-        <label class="btn" for="a3">Green</label>
-        <input type="radio" name="q5" id="a3" value="c">
-      </div>
-      <div class="button hidden">
-        <label class="btn" for="a4"></label>
-        <input type="radio" name="q5" id="a4" value="" checked>
-      </div>
-      <button type="submit" class="nextBtn" id="submitBtn">Show my results!</button>
-    </div>
-  </form>
 
-  <div class="hidden" id="result">
-    <h2>Your Result is:</h2>
-    <div id="output">
-      Output goes here
+      <div class="hidden" id="question3">
+        <h2>Which are you most interested in?</h2>
+        <div class="row">
+          <div class="button col-4">
+            <label for="a1">Desktop Applications</label>
+            <input type="radio" name="q3" id="a1" value="a" required>
+          </div>
+          <div class="button col-4">
+            <label for="a2">Creating browser games</label>
+            <input type="radio" name="q3" id="a2" value="b">
+          </div>
+          <div class="button col-4">
+            <label for="a3">Automation or scripting</label>
+            <input type="radio" name="q3" id="a3" value="c">
+          </div>
+        </div>
+        <div class="button hidden">
+          <label for="a4"></label>
+          <input type="radio" name="q3" id="a4" value="" checked>
+        </div>
+        <button type="button" class="btn btn-secondary btn-lg nextBtn" id="q3Btn">Next</button>
+      </div>
+
+      <div class="hidden" id="question4">
+        <h2>Which are you most interested in?</h2>
+        <div class="row">
+          <div class="button col-4">
+            <label for="a1">Banking</label>
+            <input type="radio" name="q4" id="a1" value="a" required>
+          </div>
+          <div class="button col-4">
+            <label for="a2">Web and Mobile Apps</label>
+            <input type="radio" name="q4" id="a2" value="b">
+          </div>
+          <div class="button col-4">
+            <label for="a3">Mobile and Web Apps</label>
+            <input type="radio" name="q4" id="a3" value="c">
+          </div>
+        </div>
+        <div class="button hidden">
+          <label for="a4"></label>
+          <input type="radio" name="q4" id="a4" value="" checked>
+        </div>
+        <button type="button" class="btn btn-secondary btn-lg nextBtn" id="q4Btn">Next</button>
+      </div>
+
+      <div class="hidden" id="question5">
+        <h2>Whats your favorite color?</h2>
+        <div class="row">
+          <div class="button col-4">
+            <label for="a1">Red</label>
+            <input type="radio" name="q5" id="a1" value="a" required>
+          </div>
+          <div class="button col-4">
+            <label for="a2">Blue</label>
+            <input type="radio" name="q5" id="a2" value="b">
+          </div>
+          <div class="button col-4">
+            <label for="a3">Green</label>
+            <input type="radio" name="q5" id="a3" value="c">
+          </div>
+        </div>
+        <div class="button hidden">
+          <label for="a4"></label>
+          <input type="radio" name="q5" id="a4" value="" checked>
+        </div>
+        <button type="submit" class="btn btn-secondary btn-lg nextBtn" id="submitBtn">Show my
+          results!</button>
+      </div>
+
+    </form>
+
+    <div class="hidden" id="result">
+      <h2>Your Result is:</h2>
+      <div id="output"></div>
+      <button type="button" class="btn btn-warning btn-lg nextBtn" id="retryBtn">Try Again!</button>
     </div>
-    <button type="button" id="retryBtn">Try Again!</button>
   </div>
 
 </body>
