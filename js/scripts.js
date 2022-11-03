@@ -15,6 +15,7 @@ function tallyScore(event) {
 
 //nextButton will hide the current div and unhide the next div
 function nextButton(id) {
+  let header = document.getElementById("header");
   let intro = document.getElementById("intro");
   let start = document.getElementById("start");
   let q1 = document.getElementById("question1");
@@ -26,6 +27,7 @@ function nextButton(id) {
 
   if (id === "start") {
     start.setAttribute("class", "hidden");
+    header.setAttribute("class", "hidden");
     intro.setAttribute("class", "hidden");
     q1.removeAttribute("class");
   } else if (id === "q1") {
@@ -55,6 +57,7 @@ window.addEventListener("load", function () {
   const q3Btn = document.getElementById("q3Btn");
   const q4Btn = document.getElementById("q4Btn");
   const submitBtn = document.getElementById("submitBtn");
+  const retryBtn = document.getElementById("retryBtn");
 
   //initialize hidden sections
 
@@ -66,4 +69,7 @@ window.addEventListener("load", function () {
   q4Btn.addEventListener("click", function () { nextButton("q4") });
   form.addEventListener("submit", tallyScore);
   submitBtn.addEventListener("click", function () { nextButton("q5") });
+  retryBtn.addEventListener("click", function () {
+    window.location.reload();
+  });
 });
