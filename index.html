@@ -11,51 +11,103 @@
 <body>
   <h1>Programming Language Suggester</h1>
   <p>Answer these questions to help decide which programming language is best for you:</p>
-  <div id="question1">
-    <h2>Question 1:</h2>
-    <form id="answer1">
-      <button type="button" class="q1" id="choice1">Choice 1</button>
-      <button type="button" class="q1" id="choice2">Choice 2</button>
-      <button type="button" class="q1" id="choice3">Choice 3</button>
-    </form>
-  </div>
-  <div id="question2">
-    <h2>Question 2:</h2>
-    <form id="answer2">
-      <button type="button" class="q2" id="choice1">Choice 1</button>
-      <button type="button" class="q2" id="choice2">Choice 2</button>
-      <button type="button" class="q2" id="choice3">Choice 3</button>
-    </form>
-  </div>
-  <div id="question3">
-    <h2>Question 3:</h2>
-    <form id="answer1">
-      <button type="button" class="q3" id="choice1">Choice 1</button>
-      <button type="button" class="q3" id="choice2">Choice 2</button>
-      <button type="button" class="q3" id="choice3">Choice 3</button>
-    </form>
-  </div>
-  <div id="question4">
-    <h2>Question 4:</h2>
-    <form id="answer1">
-      <button type="button" class="q4" id="choice1">Choice 1</button>
-      <button type="button" class="q4" id="choice2">Choice 2</button>
-      <button type="button" class="q4" id="choice3">Choice 3</button>
-    </form>
-  </div>
-  <div id="question5">
-    <h2>Question 5:</h2>
-    <form id="answer1">
-      <button type="button" class="q5" id="choice1">Choice 1</button>
-      <button type="button" class="q5" id="choice2">Choice 2</button>
-      <button type="button" class="q5" id="choice3">Choice 3</button>
-    </form>
-  </div>
-  <div id="result">
-    <h2>Your Result is:</h2>
-    <div id="output"> Output goes here
+  <form id="survey">
+    <div id="question1">
+      <h2>Question 1:</h2>
+      <form id="answer1">
+        <div class="button">
+          <label class="btn" for="a1">Choice 1</label>
+          <input type="radio" name="q1" id="a1">
+        </div>
+        <div class="button">
+          <label class="btn" for="a2">Choice 2</label>
+          <input type="radio" name="q1" id="a2">
+        </div>
+        <div class="button">
+          <label class="btn" for="a3">Choice 3</label>
+          <input type="radio" name="q1" id="a3">
+        </div>
+        <button type="button" class="nextBtn" id="btnForQ1">Next</button>
+      </form>
     </div>
-  </div>
+    <div id="question2">
+      <h2>Question 2:</h2>
+      <form id="answer2">
+        <div class="button">
+          <label class="btn" for="a1">Choice 1</label>
+          <input type="radio" name="q2" id="a1">
+        </div>
+        <div class="button">
+          <label class="btn" for="a2">Choice 2</label>
+          <input type="radio" name="q2" id="a2">
+        </div>
+        <div class="button">
+          <label class="btn" for="a3">Choice 3</label>
+          <input type="radio" name="q2" id="a3">
+        </div>
+        <button type="button" class="nextBtn" id="btnForQ2">Next</button>
+      </form>
+    </div>
+    <div id="question3">
+      <h2>Question 3:</h2>
+      <form id="answer3">
+        <div class="button">
+          <label class="btn" for="a1">Choice 1</label>
+          <input type="radio" name="q3" id="a1">
+        </div>
+        <div class="button">
+          <label class="btn" for="a2">Choice 2</label>
+          <input type="radio" name="q3" id="a2">
+        </div>
+        <div class="button">
+          <label class="btn" for="a3">Choice 3</label>
+          <input type="radio" name="q3" id="a3">
+        </div>
+        <button type="button" class="nextBtn" id="btnForQ3">Next</button>
+      </form>
+    </div>
+    <div id="question4">
+      <h2>Question 4:</h2>
+      <form id="answer4">
+        <div class="button">
+          <label class="btn" for="a1">Choice 1</label>
+          <input type="radio" name="q4" id="a1">
+        </div>
+        <div class="button">
+          <label class="btn" for="a2">Choice 2</label>
+          <input type="radio" name="q4" id="a2">
+        </div>
+        <div class="button">
+          <label class="btn" for="a3">Choice 3</label>
+          <input type="radio" name="q4" id="a3">
+        </div>
+        <button type="button" class="nextBtn" id="btnForQ4">Next</button>
+      </form>
+    </div>
+    <div id="question5">
+      <h2>Question 5:</h2>
+      <form id="answer5">
+        <div class="button">
+          <label class="btn" for="a1">Choice 1</label>
+          <input type="radio" name="q5" id="a1">
+        </div>
+        <div class="button">
+          <label class="btn" for="a2">Choice 2</label>
+          <input type="radio" name="q5" id="a2">
+        </div>
+        <div class="button">
+          <label class="btn" for="a3">Choice 3</label>
+          <input type="radio" name="q5" id="a3">
+        </div>
+        <button type="button" class="nextBtn" id="btnForQ5">Show my results!</button>
+      </form>
+    </div>
+    <div id="result">
+      <h2>Your Result is:</h2>
+      <div id="output"> Output goes here
+      </div>
+    </div>
+  </form>
 
 </body>
 
