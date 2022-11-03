@@ -12,29 +12,28 @@ function tallyScore(event) {
   let submission = q1Answer + q2Answer + q3Answer + q4Answer + q5Answer;
 
   //Counters for determining score, by parsing the combined answer string
-  let a = 0;
-  let b = 0;
-  let c = 0;
-
+  let jaCounter = 0;
+  let jsCounter = 0;
+  let pyCounter = 0;
   for (let i = 0; i < submission.length; i++) {
     if (submission[i] === "a") {
-      a++;
+      jaCounter++;
     } else if (submission[i] === "b") {
-      b++;
+      jsCounter++;
     } else if (submission[i] === "c") {
-      c++;
+      pyCounter++;
     }
   }
 
-  //Branching logic for converting score counters  into coding language recommendation
+  //Branching logic for converting score counters into coding language recommendation
   let output = "";
-  if (a === b && b === c) {
+  if (jaCounter === jsCounter && jsCounter === pyCounter) {
     output = "Please try again and make sure to answer every question!";
-  } else if (a > b && a > c || a === c) {
+  } else if (jaCounter > jsCounter && jaCounter > pyCounter || jaCounter === pyCounter) {
     output = "You should learn Java";
-  } else if (b > a && b > c || b === c) {
+  } else if (jsCounter > jaCounter && jsCounter > pyCounter || jsCounter === pyCounter) {
     output = "You should learn Javascript";
-  } else if (c > a && c > b) {
+  } else if (pyCounter > jaCounter && pyCounter > jsCounter) {
     output = "You should learn Python";
   } else {
     output = "Oops! Something went wrong";
@@ -43,7 +42,7 @@ function tallyScore(event) {
   document.getElementById("output").innerText = output;
 }
 
-//nextButton function will hide the current section and unhide the next one
+//nextButton function will hide the current section and unhide the next one when the next button is pressed
 function nextButton(id) {
   let start = document.getElementById("start");
   let q1 = document.getElementById("question1");
@@ -58,7 +57,7 @@ function nextButton(id) {
     q1.classList.remove("hidden");
   } else if (id === "q1") {
     q1.setAttribute("class", "hidden");
-    q2Btn.classList.remove("hidden");
+    q2.classList.remove("hidden");
   } else if (id === "q2") {
     q2.setAttribute("class", "hidden");
     q3.classList.remove("hidden");
@@ -70,7 +69,7 @@ function nextButton(id) {
     q5.classList.remove("hidden");
   } else if (id === "q5") {
     q5.setAttribute("class", "hidden");
-    q5.classList.remove("hidden");
+    result.classList.remove("hidden");
   }
 }
 
