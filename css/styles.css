@@ -1,3 +1,57 @@
+.container {
+  margin: auto;
+  margin-top: 25vh;
+  width: 50%;
+}
+
+#header {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+#intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: grid;
+  margin: auto;
+  width: 60%;
+}
+
+#output {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
 .hidden {
   display: none;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  width: 90%;
+  height: 30vh;
+  padding-top: 12vh;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  border: 1px solid lightgrey;
+  background-color: rgb(245, 244, 244);
+}
+
+input[type="radio"]:checked+label {
+  border: 2px solid darkgrey;
+  background-color: rgb(226, 226, 226);
+  font-weight: bold;
 }
