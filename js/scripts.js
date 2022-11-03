@@ -28,19 +28,15 @@ function tallyScore(event) {
   let output = "";
 
   if (a === b && b === c) {
-    output = "You should learn Java, Javascript, and Python";
-  } else if (a > b && a > c) {
+    output = "Please try again and make sure to answer every question!";
+  } else if (a > b && a > c || a === c) {
     output = "You should learn Java";
-  } else if (b > a && b > c) {
+  } else if (b > a && b > c || b === c) {
     output = "You should learn Javascript";
   } else if (c > a && c > b) {
     output = "You should learn Python";
-  } else if (a === c) {
-    output = "You should learn Java and Pyton";
-  } else if (b === c) {
-    output = "You should learn Javascript and Python";
   } else {
-    output = "uh oh";
+    output = "Oops! Something went wrong";
   }
 
   document.getElementById("output").innerText = output;
