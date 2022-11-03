@@ -1,5 +1,4 @@
-//Business Logic
-//tallyScore will collect the radioButton scores and output an answer
+//tallyScore function collects the radio button inputs and output a coding suggestion
 function tallyScore(event) {
   event.preventDefault();
 
@@ -9,8 +8,10 @@ function tallyScore(event) {
   let q4Answer = document.querySelector('input[name="q4"]:checked').value;
   let q5Answer = document.querySelector('input[name="q5"]:checked').value;
 
+  //Combine all form inputs into single string for parsing
   let submission = q1Answer + q2Answer + q3Answer + q4Answer + q5Answer;
 
+  //Counters for determining score, by parsing the combined answer string
   let a = 0;
   let b = 0;
   let c = 0;
@@ -25,8 +26,8 @@ function tallyScore(event) {
     }
   }
 
+  //Branching logic for converting score counters  into coding language recommendation
   let output = "";
-
   if (a === b && b === c) {
     output = "Please try again and make sure to answer every question!";
   } else if (a > b && a > c || a === c) {
@@ -42,10 +43,8 @@ function tallyScore(event) {
   document.getElementById("output").innerText = output;
 }
 
-//nextButton will hide the current div and unhide the next div
+//nextButton function will hide the current section and unhide the next one
 function nextButton(id) {
-  let header = document.getElementById("header");
-  let intro = document.getElementById("intro");
   let start = document.getElementById("start");
   let q1 = document.getElementById("question1");
   let q2 = document.getElementById("question2");
@@ -56,28 +55,25 @@ function nextButton(id) {
 
   if (id === "start") {
     start.setAttribute("class", "hidden");
-    header.setAttribute("class", "hidden");
-    intro.setAttribute("class", "hidden");
-    q1.removeAttribute("class");
+    q1.classList.remove("hidden");
   } else if (id === "q1") {
     q1.setAttribute("class", "hidden");
-    q2.removeAttribute("class");
+    q2Btn.classList.remove("hidden");
   } else if (id === "q2") {
     q2.setAttribute("class", "hidden");
-    q3.removeAttribute("class");
+    q3.classList.remove("hidden");
   } else if (id === "q3") {
     q3.setAttribute("class", "hidden");
-    q4.removeAttribute("class");
+    q4.classList.remove("hidden");
   } else if (id === "q4") {
     q4.setAttribute("class", "hidden");
-    q5.removeAttribute("class");
+    q5.classList.remove("hidden");
   } else if (id === "q5") {
     q5.setAttribute("class", "hidden");
-    result.removeAttribute("class");
+    q5.classList.remove("hidden");
   }
 }
 
-//UI Logic
 window.addEventListener("load", function () {
   const form = document.getElementById("survey");
   const startBtn = document.getElementById("startBtn");
@@ -88,9 +84,7 @@ window.addEventListener("load", function () {
   const submitBtn = document.getElementById("submitBtn");
   const retryBtn = document.getElementById("retryBtn");
 
-  //initialize hidden sections
-
-  //listen for submit button
+  //Event listeners for button elements 
   startBtn.addEventListener("click", function () { nextButton("start") });
   q1Btn.addEventListener("click", function () { nextButton("q1") });
   q2Btn.addEventListener("click", function () { nextButton("q2") });
