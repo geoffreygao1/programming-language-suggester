@@ -1,6 +1,5 @@
 //Business Logic
-
-//tallyScore will collect the radioButton scores and output an programming language answer
+//tallyScore will collect the radioButton scores and output an answer
 function tallyScore(event) {
   event.preventDefault();
 
@@ -10,7 +9,41 @@ function tallyScore(event) {
   let q4Answer = document.querySelector('input[name="q4"]:checked').value;
   let q5Answer = document.querySelector('input[name="q5"]:checked').value;
 
-  // document.getElementById("output").innerText = result;
+  let submission = q1Answer + q2Answer + q3Answer + q4Answer + q5Answer;
+
+  let a = 0;
+  let b = 0;
+  let c = 0;
+
+  for (let i = 0; i < submission.length; i++) {
+    if (submission[i] === "a") {
+      a++;
+    } else if (submission[i] === "b") {
+      b++;
+    } else if (submission[i] === "c") {
+      c++;
+    }
+  }
+
+  let output = "";
+
+  if (a === b && b === c) {
+    output = "You should learn Java, Javascript, and Python";
+  } else if (a > b && a > c) {
+    output = "You should learn Java";
+  } else if (b > a && b > c) {
+    output = "You should learn Javascript";
+  } else if (c > a && c > b) {
+    output = "You should learn Python";
+  } else if (a === c) {
+    output = "You should learn Java and Pyton";
+  } else if (b === c) {
+    output = "You should learn Javascript and Python";
+  } else {
+    output = "uh oh";
+  }
+
+  document.getElementById("output").innerText = output;
 }
 
 //nextButton will hide the current div and unhide the next div
