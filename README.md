@@ -18,7 +18,7 @@ _This website contains a short survey that, when filled out, will output a recom
 
 ## Github Pages Link
 
-[Click here]() to view the Github Pages website
+[Click here](https://geoffreygao1.github.io/programming-language-suggester/) to view the Github Pages website
 
 ## Setup/Installation Requirements
 
