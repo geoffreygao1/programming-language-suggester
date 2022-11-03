@@ -52,8 +52,10 @@ label {
   width: 90%;
   height: 20vh;
   padding: 10px;
-  padding-top: 25%;
+  display: flex;
   text-align: center;
+  justify-content: center;
+  align-items: center;
   border-radius: 5px;
   margin-bottom: 30px;
   border: 1px solid lightgrey;
