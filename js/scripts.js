@@ -35,6 +35,8 @@ function tallyScore(event) {
     output = "You should learn Javascript";
   } else if (pyCounter > jaCounter && pyCounter > jsCounter) {
     output = "You should learn Python";
+  } else if (jaCounter === jsCounter) {
+    output = "You should learn Java";
   } else {
     output = "Oops! Something went wrong";
   }
